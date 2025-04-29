@@ -9,6 +9,9 @@ public class Game {
     }
 
     public Game(int secretNumber) {
+        if (secretNumber < 1 || secretNumber > 100) {
+            throw new IllegalArgumentException("Число должно быть от 1 до 100");
+        }
         this.secretNumber = secretNumber;
     }
 

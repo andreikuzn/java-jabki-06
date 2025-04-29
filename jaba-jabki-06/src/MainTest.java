@@ -65,6 +65,10 @@ class MainTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> game.checkGuess(0));
 
         Assertions.assertThrows(IllegalArgumentException.class, () -> game.checkGuess(101));
+
+        Assertions.assertThrows(IllegalArgumentException.class, () -> new Game(0));
+
+        Assertions.assertThrows(IllegalArgumentException.class, () -> new Game(101));
     }
 
     @Test
